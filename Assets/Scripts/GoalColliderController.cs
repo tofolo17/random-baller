@@ -6,6 +6,7 @@ public class GoalColliderController : MonoBehaviour
 {
     public Text text;
 
+    // Static so the score survives the scene reload that restarts each round.
     private static int _playerOneScore;
     private static int _playerTwoScore;
 
@@ -34,6 +35,7 @@ public class GoalColliderController : MonoBehaviour
                 _playerTwoScore++;
             }
 
+            // Reload the scene: new random players and a new ball for the next round.
             SceneManager.LoadScene(0);
         }
     }

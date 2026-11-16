@@ -17,6 +17,7 @@ public class BallSpawner : MonoBehaviour
 
     private IEnumerator Sleep()
     {
+        // The ball stays frozen for 1 s before physics kicks in.
         yield return new WaitForSeconds(1);
 
         m_RigidBody2D.simulated = true;

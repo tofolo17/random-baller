@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
             var intHorizontalInput = (int) m_HorizontalInput;
             
             m_PositionMovement = new Vector2(m_HorizontalInput * forceMultiplier, 0f);
+            // Above the speed cap, only accept input in the opposite direction (to brake).
             if (m_RigidBody2D.velocity.x > maxLinearSpeed)
             {
                 if (intHorizontalInput == -1)

@@ -12,6 +12,7 @@ public class PlayerSpawner : MonoBehaviour
 
     public void Start()
     {
+        // Each round, pick a random shape and randomize its force, speed, size, color and bounciness.
         var prefabNumber = Random.Range(0, prefabs.Length);
 
         var instantiatedObject = Instantiate(prefabs[prefabNumber], gameObject.transform.position, Quaternion.identity);
